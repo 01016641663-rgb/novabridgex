@@ -1,1 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nova Bridge X (NVBX)</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.6;
+}
+
+header{
+text-align:center;
+padding:60px 20px;
+background:linear-gradient(to bottom,#1a0000,#0a0a0a);
+}
+
+.logo{
+width:220px;
+max-width:80%;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+h1{
+font-size:48px;
+color:#ff3333;
+}
+
+.tagline{
+font-size:22px;
+margin-top:15px;
+color:#ff9999;
+}
+
+.buttons{
+margin-top:35px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+margin:10px;
+background:#ff3333;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#cc0000;
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:60px 25px;
+}
+
+h2{
+color:#ff4444;
+margin-bottom:20px;
+border-bottom:2px solid #ff3333;
+padding-bottom:10px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:15px;
+margin-top:20px;
+border:1px solid #222;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.feature{
+background:#111;
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.contract{
+word-break:break-all;
+font-size:18px;
+}
+
+.copy-btn{
+margin-top:15px;
+padding:10px 20px;
+background:#ff3333;
+border:none;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:50px;
+background:#111;
+margin-top:40px;
+color:#888;
+}
+
+a{
+color:#ff6666;
+}
+
+</style>
+
+<script>
+
+function copyContract() {
+
+navigator.clipboard.writeText(
+"0x28C9C0d28A4baC26770dfF95080167D54C4eBD7A"
+);
+
+alert("Contract copied!");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" class="logo">
+
+<h1>Nova Bridge X (NVBX)</h1>
+
+<p class="tagline">
+Send $100 to your family for as little as $0.10 in transaction costs.
+</p>
+
+<div class="buttons">
+
+<a class="btn"
+href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=0x28C9C0d28A4baC26770dfF95080167D54C4eBD7A&outputCurrency=BNB"
+target="_blank">
+Buy NVBX
+</a>
+
+<a class="btn"
+href="whitepaper.html">
+White Paper
+</a>
+
+<a class="btn"
+href="https://t.me/novaxpcoin"
+target="_blank">
+Telegram
+</a>
+
+</div>
+
+</header>
+
+<section>
+
+<h2>About Nova Bridge X</h2>
+
+<div class="card">
+
+Nova Bridge X (NVBX) is a digital utility token built on BNB Smart Chain.
+
+The project focuses on low-cost global transfers, peer-to-peer payments, and future merchant adoption.
+
+Our mission is to make international transfers simple, affordable, and accessible for everyone.
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Why Choose NVBX?</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>Fast Transfers</h3>
+<p>Near-instant blockchain settlement.</p>
+</div>
+
+<div class="feature">
+<h3>Low Fees</h3>
+<p>Affordable transactions worldwide.</p>
+</div>
+
+<div class="feature">
+<h3>Global Access</h3>
+<p>Available anywhere with internet access.</p>
+</div>
+
+<div class="feature">
+<h3>BNB Chain</h3>
+<p>Powered by BNB Smart Chain.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Token Information</h2>
+
+<div class="card">
+
+<p><strong>Name:</strong> Nova Bridge X</p>
+
+<p><strong>Symbol:</strong> NVBX</p>
+
+<p><strong>Network:</strong> BNB Smart Chain</p>
+
+<p><strong>Decimals:</strong> 18</p>
+
+<br>
+
+<p class="contract">
+
+0x28C9C0d28A4baC26770dfF95080167D54C4eBD7A
+
+</p>
+
+<button class="copy-btn" onclick="copyContract()">
+
+Copy Contract
+
+</button>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>How It Works</h2>
+
+<div class="card">
+
+<ol>
+
+<li>Buy NVBX from PancakeSwap.</li>
+
+<li>Send NVBX to another wallet anywhere in the world.</li>
+
+<li>The recipient receives the transfer instantly.</li>
+
+<li>Use, hold, or exchange NVBX.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Official Links</h2>
+
+<div class="card">
+
+<p>
+<a href="https://dex.coinmarketcap.com/token/bsc/0x28c9c0d28a4bac26770dff95080167d54c4ebd7a/" target="_blank">
+CoinMarketCap
+</a>
+</p>
+
+<br>
+
+<p>
+<a href="https://www.geckoterminal.com/bsc/pools/0x3b1390d37e025ae913e5d3ff666ecf5fedaa432c" target="_blank">
+GeckoTerminal
+</a>
+</p>
+
+<br>
+
+<p>
+<a href="https://www.facebook.com/Novaxpcoin" target="_blank">
+Facebook
+</a>
+</p>
+
+<br>
+
+<p>
+<a href="https://t.me/novaxpcoin" target="_blank">
+Telegram
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Nova Bridge X (NVBX)
+
+</footer>
+
+</body>
+</html>
