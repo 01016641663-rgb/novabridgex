@@ -1,0 +1,6 @@
+User-agent: *
+
+Allow: /
+
+Sitemap:
+https://01016641663-rgb.github.io/novabridgex/sitemap.xml
