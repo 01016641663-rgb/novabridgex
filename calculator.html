@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NVBX Transfer Calculator</title>
+
+<style>
+
+body{
+background:#0a0a0a;
+color:white;
+font-family:Arial,sans-serif;
+padding:40px;
+max-width:1000px;
+margin:auto;
+}
+
+h1{
+color:#ff3333;
+text-align:center;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:15px;
+margin-top:25px;
+}
+
+label{
+display:block;
+margin-top:15px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-top:5px;
+background:#222;
+color:white;
+border:1px solid #444;
+border-radius:8px;
+}
+
+button{
+margin-top:20px;
+padding:15px;
+width:100%;
+background:#ff3333;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:18px;
+}
+
+button:hover{
+background:#cc0000;
+}
+
+.result{
+margin-top:30px;
+font-size:24px;
+text-align:center;
+color:#00ff66;
+font-weight:bold;
+}
+
+.note{
+margin-top:20px;
+color:#bbb;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Nova Bridge X Transfer Calculator</h1>
+
+<div class="card">
+
+<label>Current NVBX Price (USD)</label>
+
+<input type="number" id="price" value="0.0001" step="0.00000001">
+
+<label>Amount</label>
+
+<input type="number" id="amount" value="100">
+
+<label>Currency</label>
+
+<select id="currency">
+
+<option value="1">USD</option>
+
+<option value="0.2667">SAR (Saudi Riyal)</option>
+
+<option value="0.012">INR (Indian Rupee)</option>
+
+<option value="0.0035">PKR (Pakistani Rupee)</option>
+
+<option value="0.0083">BDT (Bangladeshi Taka)</option>
+
+<option value="3.25">KWD (Kuwaiti Dinar)</option>
+
+<option value="0.27">QAR (Qatari Riyal)</option>
+
+<option value="0.18">BRL (Brazilian Real)</option>
+
+</select>
+
+<button onclick="calculateNVBX()">
+
+Calculate NVBX
+
+</button>
+
+<div class="result" id="result">
+
+Enter values and click Calculate
+
+</div>
+
+<div class="note">
+
+Exchange rates are approximate and can be updated manually.
+
+</div>
+
+</div>
+
+<script>
+
+function calculateNVBX(){
+
+let price =
+parseFloat(document.getElementById("price").value);
+
+let amount =
+parseFloat(document.getElementById("amount").value);
+
+let currencyRate =
+parseFloat(document.getElementById("currency").value);
+
+let usdValue =
+amount * currencyRate;
+
+let nvbx =
+usdValue / price;
+
+document.getElementById("result").innerHTML =
+
+usdValue.toFixed(2) +
+
+" USD = " +
+
+nvbx.toLocaleString() +
+
+" NVBX";
+
+}
+
+</script>
+
+</body>
+</html>
