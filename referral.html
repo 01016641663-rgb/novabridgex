@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NVBX Referral Program</title>
+
+<style>
+
+body{
+background:#0a0a0a;
+color:white;
+font-family:Arial,sans-serif;
+max-width:1100px;
+margin:auto;
+padding:40px;
+text-align:center;
+}
+
+h1{
+color:#ff3333;
+font-size:50px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:15px;
+border:1px solid #222;
+margin-top:25px;
+}
+
+input{
+width:90%;
+max-width:700px;
+padding:12px;
+margin-top:10px;
+background:#222;
+color:white;
+border:1px solid #444;
+border-radius:8px;
+}
+
+button{
+background:#ff3333;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:#cc0000;
+}
+
+a{
+color:#ff6666;
+}
+
+</style>
+
+<script>
+
+function generateLink(){
+
+let code=document.getElementById("refcode").value.trim();
+
+if(code===""){
+alert("Enter your wallet or referral code");
+return;
+}
+
+let link=
+window.location.origin+
+window.location.pathname.replace("referral.html","")+
+"?ref="+encodeURIComponent(code);
+
+document.getElementById("result").value=link;
+
+}
+
+function copyLink(){
+
+navigator.clipboard.writeText(
+document.getElementById("result").value
+);
+
+alert("Referral link copied!");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Nova Bridge X Referral Program</h1>
+
+<div class="card">
+
+<h2>Earn 100 NVBX</h2>
+
+<p>
+
+Invite a new user to Nova Bridge X.
+
+When the invited user completes the first successful transfer,
+you may qualify for a reward of 100 NVBX according to the program rules.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Create Your Referral Link</h2>
+
+<p>
+
+Enter your wallet address or referral code:
+
+</p>
+
+<input
+id="refcode"
+placeholder="Your Wallet Address">
+
+<br>
+
+<button onclick="generateLink()">
+
+Generate Referral Link
+
+</button>
+
+<br><br>
+
+<input
+id="result"
+readonly
+placeholder="Your referral link will appear here">
+
+<br>
+
+<button onclick="copyLink()">
+
+Copy Referral Link
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>How It Works</h2>
+
+<p>
+
+1. Generate your referral link.
+
+</p>
+
+<p>
+
+2. Share it with friends and family.
+
+</p>
+
+<p>
+
+3. New users visit the website using your link.
+
+</p>
+
+<p>
+
+4. After their first successful transfer,
+eligible rewards may be granted according to the program rules.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Important Notice</h2>
+
+<p>
+
+The referral program is currently managed manually.
+
+Reward eligibility is reviewed based on available transfer records and program requirements.
+
+</p>
+
+</div>
+
+</body>
+</html>
